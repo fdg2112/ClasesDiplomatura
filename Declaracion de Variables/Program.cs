@@ -21,16 +21,22 @@ const int NUM2 = 21;
 const double NUM3 = 5.53;
 float result = 0f;
 Console.WriteLine($"NUM1: {NUM1}, NUM2: {NUM2}, NUM3: {NUM3}");
+//Sumar los tres números.
 result = NUM1 + NUM2 + (float)NUM3;
 Console.WriteLine($"Suma de NUM1, NUM2 y NUM3: {result}");
+//Restar a NUM1, NUM2 y NUM3.
 result = NUM1 - NUM2 - (float)NUM3;
 Console.WriteLine($"Resta de NUM1, NUM2 y NUM3: {result}");
+//Multiplicar NUM1 por NUM3.
 result = NUM1 * (float)NUM3;
 Console.WriteLine($"Producto de NUM1 y NUM3: {result}");
+//Dividir NUM2 por NUM1.
 result = (float)NUM2 / NUM1;
 Console.WriteLine($"División de NUM2 por NUM1: {result}");
+//Obtener el módulo de NUM2 dividido por NUM3.
 result = (float)(NUM2 % NUM3);
 Console.WriteLine($"Módulo de NUM2 dividido por NUM3: {result}");
+//Restar al resultado del producto de NUM2 y NUM3, el módulo de NUM2 por NUM3.
 double product = NUM2 * NUM3;
 double module = NUM2 % NUM3;
 double final_result = product - module;
@@ -45,18 +51,25 @@ int B = 2;
 int C = 3;
 int D = 1;
 Console.WriteLine($"A: {A}, B: {B}, C: {C}, D: {D}");
+//Si A es igual a B, a C o a D. 
 bool condition1 = (A == B || A == C || A == D);
 Console.WriteLine($"A es igual a B, C o D: {condition1}");
+//Si A es distinto a B, a C y a D. 
 bool condition2 = (A != B && A != C && A != D);
 Console.WriteLine($"A es distinto a B, C y D: {condition2}");
+//Si B es mayor o igual C o A igual a D.
 bool condition3 = (B >= C || A == D);
 Console.WriteLine($"B es mayor o igual a C o A es igual a D: {condition3}");
+//Si B es mayor o igual C y A igual a D.
 bool condition4 = (B >= C && A == D);
 Console.WriteLine($"B es mayor o igual a C y A es igual a D: {condition4}");
+//Si C es distinto a D y A menor a B o A mayor a C y D menor a B
 bool condition5 = ((C != D && A < B) || (A > C && D < B));
 Console.WriteLine($"C es distinto a D y A menor a B o A mayor a C y D menor a B: {condition5}");
+//Si C es distinto a D o A menor a B y A mayor a C o D menor a B
 bool condition6 = (C != D || (A < B && A > C) || D < B);
 Console.WriteLine($"C es distinto a D o A menor a B y A mayor a C o D menor a B: {condition6}");
+//Si C es distinto a D y A menor a B o Si A mayor a C y D menor a B
 bool condition7 = ((C != D && A < B) || (A > C && D < B));
 Console.WriteLine($"C es distinto a D y A menor a B o A mayor a C y D menor a B: {condition7}");
 
