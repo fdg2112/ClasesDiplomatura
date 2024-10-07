@@ -12,6 +12,8 @@ else if (grade >= 80) Console.WriteLine("B");
 else if (grade >= 70) Console.WriteLine("C");
 else if (grade >= 60) Console.WriteLine("D");
 else Console.WriteLine("F");
+Console.ReadKey();
+Console.Clear();
 
 //4.2.	Escribe un programa que lea la edad de una persona y determine si puede votar.
 //Si la persona tiene 16 o 17 años, imprimir "Voto opcional".
@@ -22,6 +24,8 @@ int age = int.Parse(Console.ReadLine());
 if (age >= 18) Console.WriteLine("Voto obligatorio");
 else if (age >= 16) Console.WriteLine("Voto opcional");
 else Console.WriteLine("No puede votar");
+Console.ReadKey();
+Console.Clear();
 
 //4.3.	Escribe un programa que lea la hora (en formato de 24 horas) y
 //determine si es mañana, tarde, noche o madrugada: 
@@ -32,6 +36,8 @@ if (hour >= 6 && hour <= 11) Console.WriteLine("Mañana");
 else if (hour >= 12 && hour <= 17) Console.WriteLine("Tarde");
 else if (hour >= 18 && hour <= 23) Console.WriteLine("Noche");
 else Console.WriteLine("Madrugada");
+Console.ReadKey();
+Console.Clear();
 
 //4.4.	Escribe un programa que lea un número y determine si es positivo, negativo o cero.
 //Si es positivo, determinar si es par o impar.
@@ -45,7 +51,8 @@ if (number > 0)
 }
 else if (number < 0) Console.WriteLine("Es Negativo");
 else Console.WriteLine("Es cero");
-
+Console.ReadKey();
+Console.Clear();
 
 //4.5.	Escribe un programa que lea una letra y
 //determine si es una vocal o consonante,y si es mayúscula o minúscula.
@@ -59,6 +66,8 @@ if (char.IsLetter(letter))
     else Console.WriteLine("Es una Consonante Minúscula");
 }
 else Console.WriteLine("No es una letra");
+Console.ReadKey();
+Console.Clear();
 
 //4.6.	Escribe un programa que lea el precio de un producto y
 //determine si es caro, barato o regular. Considerar: 
@@ -70,16 +79,19 @@ float price = float.Parse(Console.ReadLine());
 if (price < 20) Console.WriteLine("Barato");
 else if (price <= 50) Console.WriteLine("Regular");
 else Console.WriteLine("Caro");
+Console.ReadKey();
+Console.Clear();
 
 //4.7.	Escribe un programa que lea tres números e imprima el mayor de ellos.
 Console.WriteLine("Ingrese tres números:");
 int num1 = int.Parse(Console.ReadLine());
 int num2 = int.Parse(Console.ReadLine());
 int num3 = int.Parse(Console.ReadLine());
-if (num1 >= num2 && num1 >= num3) Console.WriteLine("El mayor es: " + num1);
-else if (num2 >= num1 && num2 >= num3) Console.WriteLine("El mayor es: " + num2);
-else Console.WriteLine("El mayor es: " + num3);
-
+if (num1 >= num2 && num1 >= num3) Console.WriteLine($"El mayor es: {num1}");
+else if (num2 >= num1 && num2 >= num3) Console.WriteLine($"El mayor es: {num2}");
+else Console.WriteLine($"El mayor es: {num3}");
+Console.ReadKey();
+Console.Clear();
 
 //4.8.	Escribe un programa que lea una palabra y determine si es "si" o "no".
 //Si es "si", determinar si es en minúscula o mayúscula, o combinación de ambas.
@@ -94,6 +106,8 @@ if (word.ToLower() == "si")
 }
 else if (word.ToLower() == "no") Console.WriteLine("Ingresó no");
 else Console.WriteLine("No es ni si, ni no");
+Console.ReadKey();
+Console.Clear();
 
 //4.9.	Escribe un programa que lea una palabra y determine si es "programar" o "codificar".
 //Si es "programar", imprimir "Sos programador".
@@ -104,6 +118,8 @@ word = Console.ReadLine().ToLower();
 if (word == "programar") Console.WriteLine("Sos programador");
 else if (word == "codificar") Console.WriteLine("Sos ¿codificador?");
 else Console.WriteLine("Debiste ingresar una de esas. Chau!");
+Console.ReadKey();
+Console.Clear();
 
 //4.10.	Escribe un programa que lea el nivel de bateria de un dispositivo y determine: 
 //•	Si la bateria es mayor o igual al 80%, imprimir "Bateria alta".
@@ -116,6 +132,8 @@ if (battery >= 80) Console.WriteLine("Batería alta");
 else if (battery >= 50) Console.WriteLine("Batería media");
 else if (battery >= 20) Console.WriteLine("Batería baja");
 else Console.WriteLine("Batería crítica");
+Console.ReadKey();
+Console.Clear();
 
 //4.11.	Escribe un programa que lea el puntaje de un examen y
 //determine si el estudiante aprobó o reprobó.
@@ -128,6 +146,8 @@ if (score >= 60)
     if (score > 90) Console.Write(" con mención honorífica");
 }
 else Console.WriteLine("Reprobado");
+Console.ReadKey();
+Console.Clear();
 
 //4.12.	Escribe un programa que lea un año y determine si es bisiesto.
 //Un año es bisiesto si es divisible por 4, pero no por 100,
@@ -136,6 +156,8 @@ Console.Write("Indique el año: ");
 int year = int.Parse(Console.ReadLine());
 if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) Console.WriteLine("Es un año bisiesto");
 else Console.WriteLine("No es un año bisiesto");
+Console.ReadKey();
+Console.Clear();
 
 //4.13.	Escribe un programa que lea la cantidad de dias trabajados en un mes y
 //determine el salario mensual de una persona.
@@ -150,7 +172,9 @@ if (daysWorked > 20)
     baseSalary += baseSalary * 0.10f;
     if (daysWorked > 30) baseSalary += baseSalary * 0.10f;
 }
-Console.WriteLine("El salario es: " + baseSalary);
+Console.WriteLine($"El salario es: {baseSalary}");
+Console.ReadKey();
+Console.Clear();
 
 //4.14.	Escribe un programa que permita leer dos valores y compararlos.
 Console.Write("Ingrese el primer valor: ");
@@ -160,6 +184,8 @@ int value2 = int.Parse(Console.ReadLine());
 if (value1 > value2) Console.WriteLine("El primer valor es mayor");
 else if (value1 < value2) Console.WriteLine("El segundo valor es mayor");
 else Console.WriteLine("Ambos valores son iguales");
+Console.ReadKey();
+Console.Clear();
 
 //4.15.	Escribe un programa que permita leer tres valores y
 //almacenarlos en las variables A, B y C respectivamente.
@@ -170,12 +196,14 @@ Console.Write("Ingrese el segundo valor (B): ");
 int b = int.Parse(Console.ReadLine());
 Console.Write("Ingrese el tercer valor (C): ");
 int c = int.Parse(Console.ReadLine());
-if (a > b && a > c) Console.WriteLine("El mayor es: " + a);
-else if (b > a && b > c) Console.WriteLine("El mayor es: " + b);
-else Console.WriteLine("El mayor es: " + c);
-if (a < b && a < c) Console.WriteLine("El menor es: " + a);
-else if (b < a && b < c) Console.WriteLine("El menor es: " + b);
-else Console.WriteLine("El menor es: " + c);
+if (a > b && a > c) Console.WriteLine($"El mayor es: {a}");
+else if (b > a && b > c) Console.WriteLine($"El mayor es: {b}");
+else Console.WriteLine($"El mayor es: {c}");
+if (a < b && a < c) Console.WriteLine($"El menor es: {a}");
+else if (b < a && b < c) Console.WriteLine($"El menor es: {b}");
+else Console.WriteLine($"El menor es: {c}");
+Console.ReadKey();
+Console.Clear();
 
 //4.16.	Escribe un programa que lea una palabra y determine si es "Java", "Python", “C#”, “JavaScript”.
 //Si es "Java", imprimir "Lenguaje robusto".
@@ -190,6 +218,8 @@ else if (language == "python") Console.WriteLine("Lenguaje versátil");
 else if (language == "c#") Console.WriteLine("Es el Java de Microsoft");
 else if (language == "javascript") Console.WriteLine("Es muy bueno para Web");
 else Console.WriteLine("De ese no puedo opinar");
+Console.ReadKey();
+Console.Clear();
 
 //4.17.	Escribe un programa que lea una cadena de texto y
 //pida ingresar si es "izquierda" o "derecha".
@@ -201,6 +231,8 @@ string? direction = Console.ReadLine().ToLower();
 if (direction == "izquierda") Console.WriteLine("Gira a la izquierda");
 else if (direction == "derecha") Console.WriteLine("Gira a la derecha");
 else Console.WriteLine("Debió ingresar una de esas -_-");
+Console.ReadKey();
+Console.Clear();
 
 //4.18.	Escribe un programa que active un switch ingresando
 //la palabra “ON” y lo apague con “OFF”. (considerar las mayúsculas y minúsculas).
@@ -225,6 +257,8 @@ else
     switchState = false;
     Console.WriteLine("No se indicó, por las dudas permanecerá apagado");
 }
+Console.ReadKey();
+Console.Clear();
 
 //4.19.	Escribir un programa que pida ingresar tres números.
 //Indicar si los 3 son impares o los 3 son pares.
@@ -243,6 +277,8 @@ if (count2 == 3) Console.WriteLine("Los 3 son pares");
 else if (count1 == 3) Console.WriteLine("Los 3 son impares");
 else if (count1 == 2 && count2 == 1) Console.WriteLine("Hay 2 impares y 1 par");
 else Console.WriteLine("Hay 2 pares y 1 impar");
+Console.ReadKey();
+Console.Clear();
 
 //4.20.	Escribir un programa que pida ingresar tres números.
 //Indicar si los 3 son impares o los 3 son pares.
@@ -271,3 +307,5 @@ if (positiveCount == 3) Console.WriteLine("Los 3 son positivos");
 else if (negativeCount == 3) Console.WriteLine("Los son negtivos");
 else if (positiveCount == 2 && negativeCount == 1) Console.WriteLine("Hay 2 positivos y 1 negativo");
 else Console.WriteLine("Hay 2 negativos y 1 positivo");
+Console.ReadKey();
+Console.Clear();

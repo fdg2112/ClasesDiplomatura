@@ -45,6 +45,8 @@ switch (month)
         Console.WriteLine("Número inválido");
         break;
 }
+Console.ReadKey();
+Console.Clear();
 
 //2 Crear un programa que reciba una nota del 1 al 10 y clasifique la nota
 //como "Insuficiente", “Regular", "Bueno", "Muy Bueno“, “Sobresaliente” o "Excelente".
@@ -78,6 +80,8 @@ switch (grade)
         Console.WriteLine("Nota inválida");
         break;
 }
+Console.ReadKey();
+Console.Clear();
 
 //3 Pedir al usuario que ingrese dos números y un operador (+, -, *, /).
 //Utilizar un switch-case para realizar la operación matemática correspondiente
@@ -110,6 +114,8 @@ switch (op)
         Console.WriteLine("Operador inválido");
         break;
 }
+Console.ReadKey();
+Console.Clear();
 
 //4 Solicitar al usuario que ingrese una letra. Utilizar un switch-case
 //para determinar si la letra es una vocal (a, e, i, o, u) o una consonante.
@@ -128,6 +134,8 @@ switch (letter)
         Console.WriteLine("Es una consonante");
         break;
 }
+Console.ReadKey();
+Console.Clear();
 
 //5 Escribir un programa que reciba una calificación en formato de letra (A, B, C, D, F)
 //e imprima un mensaje que explique lo que significa. Por ejemplo, A puede significar
@@ -155,6 +163,8 @@ switch (gradeLetter)
         Console.WriteLine("Calificación inválida");
         break;
 }
+Console.ReadKey();
+Console.Clear();
 
 //6 Pedir al usuario que ingrese un carácter y utilizar un switch-case
 //para determinar si el carácter es un dígito (0-9), una letra, o un símbolo especial. 
@@ -189,6 +199,8 @@ switch (character)
 //        Console.WriteLine("Es un símbolo especial");
 //        break;
 //}
+Console.ReadKey();
+Console.Clear();
 
 //7 Crear un programa que solicite al usuario el nombre de un mes
 //en minúsculas (por ejemplo, enero) y utilice un switch-case para imprimir
@@ -237,6 +249,8 @@ switch (monthName)
         Console.WriteLine("Mes inválido");
         break;
 }
+Console.ReadKey();
+Console.Clear();
 
 //8 Pedir al usuario que ingrese un comando (start, stop, pause, reset).
 //Utilizar un switch-case para imprimir un mensaje correspondiente a la acción del comando.
@@ -261,6 +275,8 @@ switch (command)
         Console.WriteLine("Comando inválido");
         break;
 }
+Console.ReadKey();
+Console.Clear();
 
 //9 Escribir un programa que reciba una cadena (string) que represente un idioma
 //(español, inglés, francés, etc.) y utilice un switch-case para imprimir un saludo
@@ -288,3 +304,5 @@ switch (language)
         Console.WriteLine("Idioma no soportado");
         break;
 }
+Console.ReadKey();
+Console.Clear();
