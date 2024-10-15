@@ -1,4 +1,6 @@
-﻿// Ejercicio 1
+﻿
+
+// Ejercicio 1
 //string texto = "Producto: \tPrecio: \nPan \t\t$1.50 \nLeche \t\t$0.99 \nHuevos \t\t$2.00";
 //Console.WriteLine(texto);
 
