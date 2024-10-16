@@ -71,114 +71,149 @@ Console.WriteLine($"C es distinto a D o A menor a B y A mayor a C o D menor a B:
 //Si C es distinto a D y A menor a B o Si A mayor a C y D menor a B
 bool condition7 = ((C != D && A < B) || (A > C && D < B));
 Console.WriteLine($"C es distinto a D y A menor a B o A mayor a C y D menor a B: {condition7}");
-
 Console.ReadKey();
 Console.Clear();
 
 // -------- Ejercicios de la guía --------
 Console.WriteLine("""
-    1.1.Escribe un programa que lea la distancia recorrida por un vehículo
+    1.1. Escribe un programa que lea la distancia recorrida por un vehículo
     y la unidad de medida utilizada, y luego imprima estos datos.
     """);
+float distance = 0;
+string? measure;
 Console.Write("Ingrese la distancia recorrida: ");
-float distance = float.Parse(Console.ReadLine());
-Console.Write("Ingrese Metros, Millas, Kilometros: ");
-string? measure = Console.ReadLine();
-Console.WriteLine($"La distancia ingresada fue: {distance} {measure}");
+if (float.TryParse(Console.ReadLine(), out distance))
+{
+    Console.Write("Ingrese Metros, Millas, Kilómetros: ");
+    measure = Console.ReadLine();
+    Console.WriteLine($"La distancia ingresada fue: {distance} {measure}");
+}
+else Console.WriteLine("Error: La distancia ingresada no es válida.");
 Console.ReadKey();
 Console.Clear();
 
 Console.WriteLine("""
-    1.2.Escribe un programa que lea la temperatura en grados Celsius 
+    1.2. Escribe un programa que lea la temperatura en grados Celsius 
     y la convierta a grados Fahrenheit.
     """);
+float tempC = 0;
 Console.Write("Ingrese la temperatura en Cº: ");
-float tempC = float.Parse(Console.ReadLine());
-float tempF = (tempC * 1.8f) + 32;
-Console.WriteLine($"La temperatura en FCº es: {tempF}");
+if (float.TryParse(Console.ReadLine(), out tempC))
+{
+    float tempF = (tempC * 1.8f) + 32;
+    Console.WriteLine($"La temperatura en Fº es: {tempF}");
+}
+else Console.WriteLine("Error: La temperatura ingresada no es válida.");
 Console.ReadKey();
 Console.Clear();
 
 Console.WriteLine("""
-    1.3.Escribe un programa que lea el número de horas trabajadas por un empleado en una semana
+    1.3. Escribe un programa que lea el número de horas trabajadas por un empleado en una semana
     y el tipo de turno (diurno o nocturno). Luego, imprima estos datos.
     """);
-Console.Write("Ingrese la cantidad de horas hechas: ");
-int hours = int.Parse(Console.ReadLine());
-Console.Write("Indique si fueron Diurnas o Nocturnas: ");
-string? shift = Console.ReadLine();
-Console.WriteLine($"Se trabajaron: {hours} horas {shift}");
+int hours = 0;
+string? shift;
+Console.Write("Ingrese la cantidad de horas trabajadas: ");
+if (int.TryParse(Console.ReadLine(), out hours))
+{
+    Console.Write("Indique si fueron Diurnas o Nocturnas: ");
+    shift = Console.ReadLine();
+    Console.WriteLine($"Se trabajaron: {hours} horas {shift}");
+}
+else Console.WriteLine("Error: La cantidad de horas ingresada no es válida.");
 Console.ReadKey();
 Console.Clear();
 
 Console.WriteLine("""
-    1.4.Escribe un programa que lea tres números enteros y calcule su promedio.
+    1.4. Escribe un programa que lea tres números enteros y calcule su promedio.
     """);
-Console.Write("Ingrese el primer numero: ");
-int number1 = int.Parse(Console.ReadLine());
-Console.Write("Ingrese el segundo numero: ");
-int number2 = int.Parse(Console.ReadLine());
-Console.Write("Ingrese el tercer numero: ");
-int number3 = int.Parse(Console.ReadLine());
-float average = (number1 +  number2 + number3)/3;
-Console.WriteLine($"El promedio es: {average}");
+int number1 = 0, number2 = 0, number3 = 0;
+Console.Write("Ingrese el primer número: ");
+if (int.TryParse(Console.ReadLine(), out number1) &&
+    int.TryParse(Console.ReadLine(), out number2) &&
+    int.TryParse(Console.ReadLine(), out number3))
+{
+    float average = (number1 + number2 + number3) / 3f;
+    Console.WriteLine($"El promedio es: {average}");
+}
+else Console.WriteLine("Error: Uno o más números ingresados no son válidos.");
 Console.ReadKey();
 Console.Clear();
 
 Console.WriteLine("""
-    1.5.Escribe un programa que calcule la hipotenusa de un triángulo rectángulo.
+    1.5. Escribe un programa que calcule la hipotenusa de un triángulo rectángulo.
     """);
+float cath1 = 0, cath2 = 0;
 Console.Write("Ingrese la longitud del primer cateto: ");
-float cath1 = float.Parse(Console.ReadLine());
-Console.Write("Ingrese la longitud del segundo cateto: ");
-float cath2 = float.Parse(Console.ReadLine());
-float hypo = (float)Math.Sqrt((cath1 * cath1) + (cath2 * cath2));
-Console.WriteLine($"La hipotenusa es: {hypo}");
+if (float.TryParse(Console.ReadLine(), out cath1))
+{
+    Console.Write("Ingrese la longitud del segundo cateto: ");
+    if (float.TryParse(Console.ReadLine(), out cath2))
+    {
+        float hypo = (float)Math.Sqrt((cath1 * cath1) + (cath2 * cath2));
+        Console.WriteLine($"La hipotenusa es: {hypo}");
+    }
+    else Console.WriteLine("Error: La longitud del segundo cateto no es válida.");
+}
+else Console.WriteLine("Error: La longitud del primer cateto no es válida.");
 Console.ReadKey();
 Console.Clear();
 
 Console.WriteLine("""
-    1.6.Escribe un programa que declare una variable booleana.
+    1.6. Escribe un programa que declare una variable booleana.
     Informar el estado inicial, y después cambiarlo y mostrar el otro.
     """);
 bool booleanVar = true;
 Console.WriteLine($"El estado inicial es: {booleanVar}");
-booleanVar = false;
+booleanVar = !booleanVar;
 Console.WriteLine($"El nuevo estado es: {booleanVar}");
 Console.ReadKey();
 Console.Clear();
 
 Console.WriteLine("""
-    1.7.Escribe un programa lea los datos de un juguete: 
+    1.7. Escribe un programa que lea los datos de un juguete: 
     nombre, descripción, cantidad en stock y precio.
     """);
+string? toyName, toyDescription;
+int stockQuantity = 0;
+float toyPrice = 0;
 Console.Write("Ingrese el nombre del juguete: ");
-string? toyName = Console.ReadLine();
+toyName = Console.ReadLine();
 Console.Write("Ingrese la descripción del juguete: ");
-string? toyDescription = Console.ReadLine();
+toyDescription = Console.ReadLine();
 Console.Write("Ingrese la cantidad en stock: ");
-int stockQuantity = int.Parse(Console.ReadLine());
-Console.Write("Ingrese el precio del juguete: ");
-float toyPrice = float.Parse(Console.ReadLine());
-Console.WriteLine($"Juguete: {toyName}, Descripción: {toyDescription}, Stock: {stockQuantity}, Precio: {toyPrice}");
+if (int.TryParse(Console.ReadLine(), out stockQuantity))
+{
+    Console.Write("Ingrese el precio del juguete: ");
+    if (float.TryParse(Console.ReadLine(), out toyPrice))
+    {
+        Console.WriteLine($"Juguete: {toyName}, Descripción: {toyDescription}, Stock: {stockQuantity}, Precio: {toyPrice}");
+    }
+    else Console.WriteLine("Error: El precio ingresado no es válido.");
+}
+else Console.WriteLine("Error: La cantidad en stock ingresada no es válida.");
 Console.ReadKey();
 Console.Clear();
 
 Console.WriteLine("""
-    1.8.Escribe un programa lea la altura de caída de un objeto y calcule la velocidad
-    al tocar el suelo.La gravedad se debe inicializar en 9,8. (v = sqrt(2*g*h)) 
+    1.8. Escribe un programa que lea la altura de caída de un objeto y calcule la velocidad
+    al tocar el suelo. La gravedad se debe inicializar en 9,8. (v = sqrt(2*g*h)) 
     """);
-Console.Write("Ingrese la altura de caída (en metros): ");
-float fallHeight = float.Parse(Console.ReadLine());
+float fallHeight = 0;
 const float GRAVITY = 9.8f;
-float velocity = (float)Math.Sqrt(2 * GRAVITY * fallHeight);
-Console.WriteLine($"La velocidad al tocar el suelo es: {velocity} m/s");
+Console.Write("Ingrese la altura de caída (en metros): ");
+if (float.TryParse(Console.ReadLine(), out fallHeight))
+{
+    float velocity = (float)Math.Sqrt(2 * GRAVITY * fallHeight);
+    Console.WriteLine($"La velocidad al tocar el suelo es: {velocity} m/s");
+}
+else Console.WriteLine("Error: La altura ingresada no es válida.");
 Console.ReadKey();
 Console.Clear();
 
 Console.WriteLine("""
-    1.9.Escribe un programa que guarde cadenas en una variable, 
-    que esta contenga la palabra “hola” y la muestre.
+    1.9. Escribe un programa que guarde cadenas en una variable, 
+    que contenga la palabra “hola” y la muestre.
     Seguido que pida ingresar otra palabra para reemplazarla y mostrarla.
     """);
 string? greeting = "hola";
@@ -190,16 +225,15 @@ Console.ReadKey();
 Console.Clear();
 
 Console.WriteLine("""
-    1.10.Escribe un programa que declare una variable booleana para dos estados: “ON” y “OFF”.
+    1.10. Escribe un programa que declare una variable booleana para dos estados: “ON” y “OFF”.
     Se debe inicializar en verdadera, informar “ON”, y después cambiarla por falsa y mostrar “OFF”.
     """);
 bool isActive = true;
 Console.WriteLine($"Variable en ON: {isActive}");
 isActive = false;
-Console.WriteLine($"Variable en OFF: {isActive}");
 //bool isActive = true;
 //Console.WriteLine($"Estado inicial: {(isActive ? "ON" : "OFF")}");
 //isActive = false;
 //Console.WriteLine($"Estado después de cambiar: {(isActive ? "ON" : "OFF")}");
+Console.WriteLine($"Variable en OFF: {isActive}");
 Console.ReadKey();
-Console.Clear();

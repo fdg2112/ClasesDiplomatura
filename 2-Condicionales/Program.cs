@@ -203,4 +203,3 @@ if (inputChar == 'O') Console.WriteLine("Es la 'O' mayúscula.");
 if (inputChar == 'U') Console.WriteLine("Es la 'U' mayúscula.");
 Console.ReadKey();
 Console.Clear();
-
