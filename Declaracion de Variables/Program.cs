@@ -69,21 +69,21 @@ while (!stop)
             break;
         default:
             Console.Clear();
-            Console.WriteLine("----------------------------------------");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("Opción incorrecta. Presione una tecla para continuar.");
-            Console.WriteLine("");
-            Console.WriteLine("");
-            Console.WriteLine("----------------------------------------");
+            Console.WriteLine(@"
+    ------------------------------------------------------------
+    
+        Opción incorrecta. Presione una tecla para continuar.
+
+    ------------------------------------------------------------
+    ");
             Console.ReadKey();
             break;
     }
 }
 Console.WriteLine(@"
-                ....SALIENDO....
+                ....VOLVIENDO AL MENÚ PRINCIPAL....
     ");
-Thread.Sleep(3000);
+Thread.Sleep(1000);
 
 static void Ejercicio1()
 {
@@ -102,7 +102,9 @@ static void Ejercicio1()
     }
     else Console.WriteLine("Error: La distancia ingresada no es válida.");
     Console.WriteLine(@"
-            ....SALIENDO....
+
+            ....VOLVIENDO AL MENÚ....
+
     ");
     Thread.Sleep(5000);
 }
@@ -122,7 +124,9 @@ static void Ejercicio2()
     }
     else Console.WriteLine("Error: La temperatura ingresada no es válida.");
     Console.WriteLine(@"
-            ....SALIENDO....
+
+            ....VOLVIENDO AL MENÚ....
+
     ");
     Thread.Sleep(5000);
 }
@@ -165,7 +169,9 @@ static void Ejercicio4()
     }
     else Console.WriteLine("Error: Uno o más números ingresados no son válidos.");
     Console.WriteLine(@"
-            ....SALIENDO....
+
+            ....VOLVIENDO AL MENÚ....
+
     ");
     Thread.Sleep(5000);
 }
@@ -189,7 +195,9 @@ static void Ejercicio5()
     }
     else Console.WriteLine("Error: La longitud del primer cateto no es válida.");
     Console.WriteLine(@"
-            ....SALIENDO....
+
+            ....VOLVIENDO AL MENÚ....
+
     ");
     Thread.Sleep(5000);
 }
@@ -205,7 +213,9 @@ static void Ejercicio6()
     booleanVar = !booleanVar;
     Console.WriteLine($"El nuevo estado es: {booleanVar}");
     Console.WriteLine(@"
-            ....SALIENDO....
+
+            ....VOLVIENDO AL MENÚ....
+
     ");
     Thread.Sleep(5000);
 }
@@ -235,7 +245,9 @@ static void Ejercicio7()
     }
     else Console.WriteLine("Error: La cantidad en stock ingresada no es válida.");
     Console.WriteLine(@"
-            ....SALIENDO....
+
+            ....VOLVIENDO AL MENÚ....
+
     ");
     Thread.Sleep(5000);
 }
@@ -256,7 +268,9 @@ static void Ejercicio8()
     }
     else Console.WriteLine("Error: La altura ingresada no es válida.");
     Console.WriteLine(@"
-            ....SALIENDO....
+
+            ....VOLVIENDO AL MENÚ....
+
     ");
     Thread.Sleep(5000);
 }
@@ -274,7 +288,9 @@ static void Ejercicio9()
     greeting = Console.ReadLine();
     Console.WriteLine($"Palabra reemplazada: {greeting}");
     Console.WriteLine(@"
-            ....SALIENDO....
+
+            ....VOLVIENDO AL MENÚ....
+
     ");
     Thread.Sleep(5000);
 }
@@ -294,7 +310,9 @@ static void Ejercicio10()
     //Console.WriteLine($"Estado después de cambiar: {(isActive ? "ON" : "OFF")}");
     Console.WriteLine($"Variable en OFF: {isActive}");
     Console.WriteLine(@"
-            ....SALIENDO....
+
+            ....VOLVIENDO AL MENÚ....
+
     ");
     Thread.Sleep(5000);
 }
