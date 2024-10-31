@@ -46,22 +46,11 @@ Console.WriteLine("El programa se ha finalizado.");
 Console.ReadKey();
 Console.Clear();
 
-//5.5.Escribe un programa que imprima la suma de los números ingresados,
-//pero sólo de los impares. Cuando se ingrese uno par, el programa debe parar
-//y mostrar el resultado.
-number = 0;
-sum = 0;
-Console.Write("Ingrese un número: ");
-number = int.Parse(Console.ReadLine());
-while (number % 2 != 0)
-{
-    sum += number;
-    Console.Write("Ingrese un número: ");
-    number = int.Parse(Console.ReadLine());
-}
-Console.WriteLine("La suma de los números impares es: " + sum);
-Console.ReadKey();
-Console.Clear();
+Console.WriteLine("""
+5.5. Escribe un programa que imprima la suma de los números ingresados,
+pero sólo de los impares. Cuando se ingrese uno par, el programa debe parar
+y mostrar el resultado.
+""");
 
 //number = 0;
 //sum = 0;
