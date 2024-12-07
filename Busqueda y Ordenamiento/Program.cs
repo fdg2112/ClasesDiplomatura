@@ -135,6 +135,9 @@ BusquedaBinaria(arreglo, 1);
 OrdenamientoBurbuja(arreglo);
 OrdenamientoInsercion(arreglo);
 
+
+
+
 Console.WriteLine("""
     Ejercicio 1: Búsqueda Lineal y Binaria
     • Crear un programa que permita al usuario ingresar una lista de números.

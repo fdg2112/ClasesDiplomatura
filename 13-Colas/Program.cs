@@ -16,6 +16,7 @@ int[] elementos2 = colaDeNumeros.ToArray();
 colaDeNumeros.TrimExcess();
 // Vaciar la cola
 colaDeNumeros.Clear();
+
 Console.ReadKey();
 Console.Clear();
 
